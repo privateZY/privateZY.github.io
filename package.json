@@ -1,0 +1,47 @@
+{
+  "name": "lanfancekids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "publicPath": "/station/",
+  "scripts": {
+    "dev": "node build/develop.js"
+  },
+  "keywords": [],
+  "author": "kerry",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "colors": "^1.1.2",
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
+    "html-webpack-plugin": "^2.30.1",
+    "inline-manifest-webpack-plugin": "^3.0.1",
+    "node-sass": "^4.7.2",
+    "nyan-progress-webpack-plugin": "^1.2.0",
+    "opn": "^5.2.0",
+    "sass-loader": "^6.0.6",
+    "shelljs": "^0.8.1",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.11.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.2.0",
+    "lodash": "^4.17.5",
+    "vue": "^2.5.13",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  }
+}
