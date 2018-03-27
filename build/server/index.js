@@ -18,7 +18,7 @@ module.exports = function (port) {
             pathName = decodeURI(pathName)
 		
 		//获取资源文件的相对路径
-		var filePath = path.resolve(__dirname,"/publish/lanfancekids/dist"+pathName)
+		var filePath = path.join(__dirname,"../../dist"+pathName)
 		
 		console.log(filePath,pathName)
 		fs.readFile(filePath , function(err,data){

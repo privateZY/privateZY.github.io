@@ -77,10 +77,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             names: ['manifest','vuecore'].reverse()
         }),
-        new CopyWebpackPlugin([{   //作用：把public 里面的内容全部拷贝到编译目录
-            from:'src/app/view/assets/images',
-            to: 'images'
-        }]),
+        // new CopyWebpackPlugin([{   //作用：把public 里面的内容全部拷贝到编译目录
+        //     from:'src/app/view/assets/images',
+        //     to: 'images'
+        // }]),
         new InlineManifestWebpackPlugin(),
         new ExtractTextPlugin('style/app_[chunkhash:8].css'),
         new HtmlWebpackPlugin({
