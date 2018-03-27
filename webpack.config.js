@@ -85,7 +85,7 @@ module.exports = {
         new ExtractTextPlugin('style/app_[chunkhash:8].css'),
         new HtmlWebpackPlugin({
             title:'前端基础构建',
-            template:'index.ejs', //模板为同级目录下的index.html，为何不用写路径，是因为默认上下文问webpack.config.js所在的文件夹
+            template:'index.html', //模板为同级目录下的index.html，为何不用写路径，是因为默认上下文问webpack.config.js所在的文件夹
             chunks: ['vuecore','app'],
             inject:false,
             minify: {
