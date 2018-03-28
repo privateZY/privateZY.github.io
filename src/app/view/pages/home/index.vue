@@ -1,8 +1,9 @@
 <style lang="scss" scoped>
 .bannerBox {
-    height: 754px;
+    height: 832px;
     background: url('../../assets/images/home/bannerBg.png');
     background-size: cover;
+    background-position-x: 50%;
     .bannerImg {
         position: relative;
         width: 1200px;
@@ -10,9 +11,22 @@
         .title {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 25%;
+        }
+        >img {
+            margin-top: 78px;
+            box-shadow: 0 47px 40px #131411c9;
         }
     }
+}
+.middleContent {
+    height: 117px;
+    background: url('../../assets/images/home/bgb.png');
+    background-size: cover;
+    background-position-x: 50%;
+}
+.mainContent {
+    background: url('../../assets/images/home/bgs.png');
 }
 </style>
 
@@ -26,6 +40,8 @@
                 </div>
             </div>
         </div>
+        <div class="middleContent"></div>
+        <div class="mainContent"></div>
     </div>
 </template>
 <script type="text/javascript">

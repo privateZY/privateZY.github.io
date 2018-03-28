@@ -11,7 +11,7 @@ module.exports = function (port) {
 		var requestUrl = req.url
 		//浏览器输入localhost:8899/station/index.html, 那url == '/station/index.html'
 		var type = path.extname(requestUrl)  //path.extname 返回路径中文件的扩展名
-
+		console.log(type)
 		var pathName = url.parse(requestUrl).pathname
 
             //对请求的路径进行解码，防止中文乱码
@@ -19,8 +19,7 @@ module.exports = function (port) {
 		
 		//获取资源文件的相对路径
 		var filePath = path.join(__dirname,"../../dist"+pathName)
-		
-		console.log(filePath,pathName)
+		var contentType = type.slice(1)
 		fs.readFile(filePath , function(err,data){
 			if(err){
 				console.log('访问'+req.url+'出错');
@@ -30,9 +29,8 @@ module.exports = function (port) {
 				res.write('<h1>404错误</h1><p>你要找的页面不存在</p>');
 			}else{
 				res.writeHeader(200,{
-					'content-type' :  'text/html;charset="utf-8"'
+					'content-type' :  `${mine[contentType]};${mine[contentType] === 'text/html'?'charset="utf-8"':''}`
 				});
-				console.log(data)
 				res.write(data);  //将index.html显示在浏览器（客服端）
 			}
 			res.end()
