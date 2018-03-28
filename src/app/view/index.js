@@ -3,6 +3,9 @@
 // import directives from './directives'
 import App from './pages/app.vue'
 
+import './assets/css/index.css'
+import './assets/scss/index.scss'
+
 // Vue.use(components)
 // Vue.use(directives)
 console.log(App)

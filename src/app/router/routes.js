@@ -1,14 +1,10 @@
 export default [{
-    //     path:'/',
-    //     name:'root',
-    //     redirect:{name:'home'}
-    // },
-    // {
-        path:'/home',
+        path:'/',
         name:'home',
-        component:function(resolve){
-            require(['../view/pages/home/index.vue'], resolve)
-        }
+        component: resolve => require(['../view/pages/home/index.vue'], resolve)
+        // function(resolve){
+        //     require(['../view/pages/home/index.vue'], resolve)
+        // }
     // },{
     //     path:'/tree',
     //     name:'tree',

@@ -17,6 +17,9 @@ var mock = env.mock || false
 var toshell = false
 var webpackConfig = merge.smart(config, {
     watch: true,
+    watchOptions:{
+        poll:true
+    },
     devtool: 'cheap-module-eval-source-map',
     plugins: [
         new webpack.DefinePlugin({
