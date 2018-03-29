@@ -79,26 +79,24 @@ module.exports = {
             'Service': [__dirname +'/src/app/service/index.js', 'default']
         }),
 
-        //CommonsChunkPlugin 插件，负责将多次被使用的 JS 模块打包在一起
-        // new webpack.optimize.CommonsChunkPlugin({ 
-        //     names: ['manifest','vuecore'].reverse()
-        // }),
-        // new CopyWebpackPlugin([{   //作用：把public 里面的内容全部拷贝到编译目录
-        //     from:'src/app/view/assets/images',
-        //     to: 'images'
-        // }]),
+        // CommonsChunkPlugin 插件，负责将多次被使用的 JS 模块打包在一起
+        new webpack.optimize.CommonsChunkPlugin({ 
+            names: ['manifest','vuecore'].reverse()
+        }),
+        new CopyWebpackPlugin([{   //作用：把public 里面的内容全部拷贝到编译目录
+            from:'src/app/view/assets/images',
+            to: 'images'
+        }]),
         new InlineManifestWebpackPlugin(),
         new ExtractTextPlugin('style/app_[chunkhash:8].css'), // css抽取
         new HtmlWebpackPlugin({
             title:'Beaf plus',
             template:'index.ejs', //模板为同级目录下的index.html，为何不用写路径，是因为默认上下文问webpack.config.js所在的文件夹
             chunks: ['vuecore','app', 'manifest'],
-            // hash:true,
-            // chunksSortMode: 'dependency'
-            inject:"boby",
-            // minify: {
-            //     collapseWhitespace: true
-            // }
+            inject:false,
+            minify: {
+                collapseWhitespace: true
+            }
         })
         
     ]

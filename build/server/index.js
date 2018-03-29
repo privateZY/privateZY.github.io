@@ -11,7 +11,7 @@ module.exports = function (port) {
 		var requestUrl = req.url
 		//浏览器输入localhost:8899/station/index.html, 那url == '/station/index.html'
 		var type = path.extname(requestUrl)  //path.extname 返回路径中文件的扩展名
-		console.log(type)
+
 		var pathName = url.parse(requestUrl).pathname
 
             //对请求的路径进行解码，防止中文乱码
@@ -21,6 +21,8 @@ module.exports = function (port) {
 		var filePath = path.join(__dirname,"../../dist"+pathName)
 		var contentType = type.slice(1)
 		fs.readFile(filePath , function(err,data){
+			console.log(req.url);
+			// if(req.url!=="/favicon.ico") console.log(req.url);
 			if(err){
 				console.log('访问'+req.url+'出错');
 				res.writeHeader(404,{

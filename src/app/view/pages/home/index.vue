@@ -15,14 +15,16 @@
         }
         >img {
             margin-top: 78px;
-            box-shadow: 0 47px 40px #131411c9;
+            box-shadow: 0 49px 18px rgba(18, 22, 19, 0.7);
         }
     }
 }
+
 .middleContent {
     height: 117px;
     background: url('../../assets/images/home/bgb.png');
     background-size: cover;
+    // background-position-y: 100%;
     background-position-x: 50%;
 }
 .mainContent {
